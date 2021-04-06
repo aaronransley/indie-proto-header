@@ -1,0 +1,77 @@
+body,
+html {
+  margin: 0;
+}
+
+.site_wrap {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header {
+  min-height: 100vh;
+  background: linear-gradient(
+      210deg,
+      #ce288c -10%,
+      rgba(255, 255, 255, 0.1) 80%
+    ),
+    #5b89b4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover_type {
+  width: 85%;
+}
+
+.discover_type svg {
+  width: 100%;
+}
+
+.discover_type svg image[id*="icon_"] {
+  --icon_count: 9;
+  --display_time: 1.5s;
+  --duration: calc(var(--display_time) * var(--icon_count));
+
+  animation: cycle_icons var(--duration) ease-out infinite;
+  will-change: opacity;
+  opacity: 0;
+}
+
+@keyframes cycle_icons {
+  0%,
+  15%,
+  100% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+
+/* Animation delays to stagger icon reveals */
+.discover_type svg image[id*="icon_"]:nth-of-type(2) {
+  animation-delay: calc(var(--display_time) * 1);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(3) {
+  animation-delay: calc(var(--display_time) * 2);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(4) {
+  animation-delay: calc(var(--display_time) * 3);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(5) {
+  animation-delay: calc(var(--display_time) * 4);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(6) {
+  animation-delay: calc(var(--display_time) * 5);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(7) {
+  animation-delay: calc(var(--display_time) * 6);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(8) {
+  animation-delay: calc(var(--display_time) * 7);
+}
+.discover_type svg image[id*="icon_"]:nth-of-type(9) {
+  animation-delay: calc(var(--display_time) * 8);
+}
